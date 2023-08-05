@@ -51,7 +51,9 @@ public class QRCodeMonitorV2 {
                 AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(QRCodeMonitor.class.getResourceAsStream("/speech2.wav"));
                 clip = AudioSystem.getClip();
                 clip.open(audioInputStream);
-                clip.start();
+                clip.setLoopPoints(0, -1); // Loop from the beginning to the end of the audio
+
+                clip.loop(Clip.LOOP_CONTINUOUSLY); // Start continuous looping of the audio
             }
         } else {
             if (clip != null && clip.isOpen()) {
