@@ -48,7 +48,7 @@ public class QRCodeMonitorV2 {
     private static void playSound(boolean play) throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         if (play) {
             if (clip == null) {
-                AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(QRCodeMonitor.class.getResourceAsStream("/final_audio.wav"));
+                AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(QRCodeMonitor.class.getResourceAsStream("/speech2.wav"));
                 clip = AudioSystem.getClip();
                 clip.open(audioInputStream);
                 clip.start();
