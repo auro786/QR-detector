@@ -1,0 +1,60 @@
+QRCodeMonitorV2 Documentation
+
+1. Introduction:
+
+QRCodeMonitorV2 is a Java program that monitors the screen for QR codes and plays a sound when a QR code is detected. It uses the ZXing library for QR code decoding and the javax.sound.sampled library for audio playback. The program continuously captures the screen at regular intervals, processes the captured image to detect QR codes, and triggers audio playback when a QR code is found.
+
+2. Usage:
+
+To use the QRCodeMonitorV2 program, follow these steps:
+
+Place the "final_audio.wav" file in the same directory as the Java source code file.
+Compile the Java source code using a Java compiler or an integrated development environment (IDE).
+Run the compiled Java class to start the QR code monitoring and audio playback process.
+3. Dependencies:
+
+The QRCodeMonitorV2 program has the following external dependencies:
+
+ZXing library for QR code decoding (com.google.zxing)
+javax.sound.sampled library for audio playback
+4. Functionality:
+
+The program operates as follows:
+
+It creates an instance of the Robot class to capture the screen.
+The program enters an infinite loop, continuously capturing the screen at regular intervals.
+It converts the captured image to a BufferedImage and extracts pixel information for QR code processing.
+Using the ZXing library, it attempts to decode any QR code present in the captured image.
+If a QR code is detected, the decoded content is printed to the console, and the playSound() method is called with the parameter true to trigger audio playback.
+If no QR code is found, the playSound() method is called with the parameter false to stop audio playback (if it was playing).
+5. playSound() Method:
+
+The playSound(boolean play) method handles audio playback. It takes a boolean parameter play, which determines whether to play or stop the audio. If play is true, the method loads the "final_audio.wav" file using the AudioSystem.getAudioInputStream() method and starts audio playback using the Clip class. If play is false, it stops and closes the Clip to halt audio playback.
+
+6. Customization:
+
+The BEEP_INTERVAL_MS constant can be adjusted to change the time interval between screen captures and QR code detection checks.
+The audio file "final_audio.wav" can be replaced with any other supported audio file in WAV format.
+7. Exception Handling:
+
+The program includes exception handling for various situations:
+
+IOException: For file-related errors during audio loading.
+UnsupportedAudioFileException: If the audio file format is not supported.
+LineUnavailableException: For audio line-related issues during playback.
+NotFoundException, ChecksumException, and FormatException: For ZXing QR code decoding errors.
+8. Limitations:
+
+The program only works with QR codes. Other types of barcodes are not supported.
+Audio playback may be affected by the performance of the system and audio hardware.
+9. Compatibility:
+
+The QRCodeMonitorV2 program is compatible with Java 7 and later versions.
+
+10. Note:
+
+This program is for educational and experimental purposes. It may not be suitable for production use due to limitations and simplicity.
+
+11. Author:
+
+QRCodeMonitorV2 was created by Auro Arpit Sahoo and is open-source.
