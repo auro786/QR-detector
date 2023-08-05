@@ -9,3 +9,7 @@ Once a QR code is detected, the program triggers an audio notification, ensuring
 
 This project aims to enhance efficiency and convenience during online activities that involve QR code-based interactions, 
 offering a seamless attendance tracking experience in diverse virtual environments
+
+Prerequisites/External libraries to be Installed:
+zxing library JAR- https://jar-download.com/?search_box=zxing-core-3.5
+JAVAZOOM (for v1) - https://jar-download.com/artifacts/javazoom
