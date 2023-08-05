@@ -1,0 +1,11 @@
+# QR-detector
+
+This project is designed to provide QR code detection and alert functionality, incorporating an audio notification. The inspiration behind this project originated from a 
+practical scenario encountered during online class attendance management. Attendance was taken via QR codes displayed randomly on the screen, posing challenges when 
+the user was not actively looking at the screen or engaged in other tasks.
+
+By implementing this solution, the application continuously monitors the screen for QR codes using computer vision techniques. 
+Once a QR code is detected, the program triggers an audio notification, ensuring that the user is promptly alerted, even if they are not actively observing the screen.
+
+This project aims to enhance efficiency and convenience during online activities that involve QR code-based interactions, 
+offering a seamless attendance tracking experience in diverse virtual environments
